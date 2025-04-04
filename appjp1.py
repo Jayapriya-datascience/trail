@@ -37,8 +37,8 @@ if not os.path.exists(scaler_path):
     st.error(f"❌ Scaler file not found! Expected at: {scaler_path}")
     st.stop()
 
-with open(model_path, "rb") as model_file:
-    model = pickle.load(model_file)
+with open("modeljp/trained_modeljp2.pkl", "rb") as f:
+    model = pickle.load(f)
 
 import joblib  # Use joblib instead of pickle for loading scaler
 
